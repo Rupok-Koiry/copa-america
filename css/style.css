@@ -1,0 +1,390 @@
+/* === Google Font === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+/* -----------------------------
+          COMMON CSS 
+-------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+p,
+a {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 10px;
+}
+.section-title::after {
+  content: "";
+  margin: auto;
+  width: 120px;
+  height: 3px;
+  display: block;
+  background-color: #e02c6d;
+}
+.btn-animated {
+  background: #e02c6d;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 24px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn-animated:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-animated:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-animated::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  background: #e02c6d;
+}
+.btn-animated:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+.arrow {
+  margin-left: 8px;
+}
+
+/* -----------------------------
+        Header Section CSS
+-------------------------------- */
+header {
+  background-color: #2d25a0;
+  overflow: hidden;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 65px;
+  margin-bottom: 85px;
+}
+.hero-text h1 {
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 26px;
+}
+.hero-image img {
+  max-width: 556.01px;
+  width: 100%;
+}
+header:hover .hero-image img {
+  animation: bounceInOut 1s linear infinite;
+}
+
+@keyframes bounceInOut {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* -----------------------------
+      Players Section CSS
+-------------------------------- */
+.players {
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 26px 30px;
+}
+.player-image {
+  overflow: hidden;
+}
+.player-image img {
+  transition: all 0.3s ease;
+}
+.player-image:hover img {
+  transform: scale(1.05);
+}
+.player-card {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 15px;
+}
+.player-card h2 {
+  font-size: 28px;
+  color: #18191f;
+  margin: 10px 0 16px;
+}
+.player-card p {
+  color: #6c6c6c;
+  margin-bottom: 18px;
+}
+
+/* -----------------------------
+      Highlights Section CSS
+-------------------------------- */
+.all-highlights {
+  background-color: #f2f2f2;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding: 80px 0;
+}
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.highlight-text,
+.highlight-image {
+  flex-basis: 50%;
+}
+.highlight-text p {
+  margin: 8px 0 24px 0;
+  width: 85%;
+}
+.highlight-text h2 {
+  font-size: 48px;
+  line-height: 60px;
+  color: #0a0826;
+}
+
+/* -----------------------------
+      Pricing Section CSS
+-------------------------------- */
+.pricing-table {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  justify-items: center;
+}
+
+.pricing-card {
+  max-width: 360px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #6c6c6c;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+}
+
+.pricing-card-header {
+  background-color: #e02c6d;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0 0 20px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.4s linear;
+}
+
+.pricing-card:hover .pricing-card-header {
+  box-shadow: 0 0 0 26em #2d25a0;
+}
+
+.price {
+  font-size: 70px;
+  color: #e02c6d;
+  margin: 40px 0;
+  transition: all 0.2s linear;
+}
+
+.price sup {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.pricing-card:hover,
+.pricing-card:hover .price {
+  color: #fff;
+}
+
+.pricing-card li {
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.pricing-card li i {
+  margin-right: 10px;
+}
+.pricing-card li i.fa-check {
+  color: green;
+}
+.pricing-card li i.fa-times {
+  color: red;
+}
+
+.pricing-card .btn-animated {
+  margin: 40px 0;
+}
+
+/* -----------------------------
+      Contact Section CSS
+-------------------------------- */
+.contact {
+  margin: 150px 0;
+  background-color: #f2f2f2;
+  padding: 80px 0;
+}
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .contact-content .text {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+  text-align: justify;
+}
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: #e02c6d;
+}
+.contact .contact-content .info .head {
+  font-weight: 500;
+}
+.contact .contact-content .info .sub-title {
+  color: #6c6c6c;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .email {
+  margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+  border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button {
+  margin-top: 30px;
+}
+
+/* -----------------------------
+      Footer Section CSS
+-------------------------------- */
+footer {
+  text-align: center;
+}
+.footer-logo img {
+  max-width: 482px;
+  width: 100%;
+}
+.social-icons {
+  margin: 20px 0;
+}
+.social-icons i {
+  cursor: pointer;
+  margin-right: 15px;
+  color: #969bab;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 32px;
+  background-color: #e7e7e8;
+  transition: all 0.2s ease;
+}
+.social-icons i:hover {
+  color: #fff;
+  background-color: #e02c6d;
+}
+.copyright-text p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 63px;
+}

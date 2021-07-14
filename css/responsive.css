@@ -1,0 +1,88 @@
+/* === Media Query for Large Screen ===*/
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 4%;
+  }
+  .hero-text h1 {
+    font-size: 48px;
+  }
+  .highlight-text h2,
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+/* === Media Query for Tablet and Laptop Screen ===*/
+
+@media screen and (max-width: 992px) {
+  .hero {
+    display: block;
+    margin-top: 46px;
+    margin-bottom: 60px;
+  }
+  .hero-image {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .players {
+    margin-top: 46px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 26px 30px;
+  }
+  .all-highlights {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .pricing-table {
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .highlights {
+    display: block;
+  }
+  .highlight-text {
+    margin-bottom: 30px;
+  }
+  .contact {
+    margin: 80px 0;
+  }
+  .contact-content {
+    display: block;
+  }
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .footer-logo img {
+    max-width: 382px;
+    width: 100%;
+  }
+}
+
+/* === Media Query for Mobile Screen ===*/
+
+@media screen and (max-width: 576px) {
+  nav {
+    display: none;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .highlight-text h2 {
+    font-size: 30px;
+  }
+  .footer-logo img {
+    max-width: 282px;
+    width: 100%;
+  }
+  .players {
+    margin-top: 46px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 26px;
+  }
+  .pricing-table {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
